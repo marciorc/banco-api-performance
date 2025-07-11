@@ -30,7 +30,7 @@ export default function () {
 
   const params = {
     headers: {
-        'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
     }
   }
 
