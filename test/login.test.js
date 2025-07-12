@@ -1,5 +1,6 @@
 import http from 'k6/http'
 import { check, sleep } from 'k6'
+import { obterBaseUrl } from '../utils/variaveis.js'
 
 const postLogin = JSON.parse(open('../fixtures/postLogin.json'))
 
@@ -22,7 +23,7 @@ export const options = {
 
 export default function () {
 
-  const url = 'http://localhost:3000/login'
+  const url = obterBaseUrl() + '/login'
 
   postLogin.username = 'junior.lima'
 
